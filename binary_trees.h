@@ -101,4 +101,14 @@ void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
  */
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
 
+/**
+ * binary_tree_postorder - A function that goes through a binary tree using
+ * postorder traversal
+ * @tree: A pointer to the root node of the tree to traverse
+ * @func: A pointer to a function to call for each node. The value in the node
+ * must be passed as a parameter to this function
+ * If tree or func is NULL, do nothing
+ */
+void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
+
 #endif /* _BINARY_TREES_H_ */
