@@ -36,4 +36,35 @@ void binary_tree_print(const binary_tree_t *);
  */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 
+/**
+ * binary_tree_insert_left - A function that inserts a node as the
+ * left-child of another node
+ * @parent: A pointer to the node to insert the left-child in
+ * @value: The value to store in the new node
+ * Return: Pointer to the created node, or NULL on failure, or if
+ * parent is NULL
+ * If parent already has a left-child, the new node must take its place,
+ * and the old left-child must be set as the left-child of the new node
+ */
+binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
+
+/**
+ * binary_tree_insert_right - Inserts a node as the right child of
+ * another node
+ * @parent: Pointer to the node to insert the right child in
+ * @value: Value to store in the new node
+ * Return: Pointer to the created node, or NULL on failure or if parent
+ * is NULL
+ * If parent already has a right-child, the new node must take its place
+ * and the old right-child must be set as the right-child of the new node
+ */
+binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
+
+/**
+ * binary_tree_delete - Deletes an entire binary tree
+ * @tree: Pointer to the root node of the tree to delete
+ * If tree is NULL, do nothing
+ */
+void binary_tree_delete(binary_tree_t *tree);
+
 #endif /* _BINARY_TREES_H_ */

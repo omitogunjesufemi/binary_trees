@@ -11,3 +11,5 @@ This project helped to understand:
 *The project contains the following task:*
 TASK | DESCRIPTION
 --- | ---
+`0-binary_tree_node.c` | A function that creates a binary tree node
+`1-binary_tree_insert_left.c` | A function that inserts a node as the left-child of another node
