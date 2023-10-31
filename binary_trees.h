@@ -119,4 +119,30 @@ void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
  */
 size_t binary_tree_height(const binary_tree_t *tree);
 
+/**
+ * binary_tree_depth - A function that measures the depth of a node in
+ * a binary tree
+ * @tree: A pointer to the node to measure the depth
+ * Return: Depth of the node
+ * If tree is NULL, your function must return 0
+ */
+size_t binary_tree_depth(const binary_tree_t *tree);
+
+/**
+ * binary_tree_size - A function that measures the size of a binary tree
+ * @tree: A pointer to the root node of the tree to measure the size
+ * Return: Depth of a node
+ * If tree is NULL, the function must return 0
+ */
+size_t binary_tree_size(const binary_tree_t *tree);
+
+/**
+ * binary_tree_leaves - A function that counts the leaves in a binary tree
+ * @tree: A pointer to the root node of the tree to count the number of leaves
+ * Return: Number of leaves in a binary tree
+ * If tree is NULL, the function must return 0
+ * A NULL pointer is not a leaf
+ */
+size_t binary_tree_leaves(const binary_tree_t *tree);
+
 #endif /* _BINARY_TREES_H_ */
