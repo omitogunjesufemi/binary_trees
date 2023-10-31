@@ -23,7 +23,7 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 /**
  * tree_leaves - A recursive function that counts the leaves in a binary tree
  * @tree: A pointer to the root node of the tree to count the number of leaves
- * Return: Number of leaves in a binary tree
+ * @count: Pointer to the count of leaves
  */
 void tree_leaves(const binary_tree_t *tree, size_t *count)
 {
