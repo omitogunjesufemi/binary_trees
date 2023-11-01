@@ -4,7 +4,7 @@ size_t tree_height_size(const binary_tree_t *tree, size_t *size);
 size_t exponential(size_t base, size_t power);
 
 /**
- * bianry_tree_is_perfect - Checks if a binary tree is perfect
+ * binary_tree_is_perfect - Checks if a binary tree is perfect
  * @tree: Pointer to the root node of the tree to check
  * Return: 1 if perfect, and 0 if otherwise
  * If tree is NULL, function must return 0
