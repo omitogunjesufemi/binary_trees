@@ -19,6 +19,11 @@ int binary_tree_is_full(const binary_tree_t *tree)
 	return (flag);
 }
 
+/**
+ * tree_is_full - Checks if a binary tree is full
+ * @tree: Pointer to the root node of the tree to check
+ * @flag: Flag turns to 0 when it is not balanced
+ */
 void tree_is_full(const binary_tree_t *tree, int *flag)
 {
 	if (tree == NULL)
