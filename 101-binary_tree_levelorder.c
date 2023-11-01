@@ -16,7 +16,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
 	queue *first, *last;
 
-	if (tree == NULL)
+	if (tree == NULL || func == NULL)
 		return;
 	first = NULL, last = NULL;
 	enqueue(&first, &last, tree);
