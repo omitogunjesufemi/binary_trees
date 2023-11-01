@@ -25,6 +25,13 @@ typedef struct binary_tree_s bst_t;
 
 typedef struct binary_tree_s binary_tree_t;
 
+struct queue_s
+{
+	const binary_tree_t *tree;
+	struct queue_s *next;
+};
+typedef struct queue_s queue;
+
 void binary_tree_print(const binary_tree_t *);
 
 /**
@@ -195,5 +202,15 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
  * If node has no uncle return NULL
  */
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+
+/**
+ * binary_tree_levelorder - Function that goes through a binary tree using
+ * level-order traversal
+ * @tree: Pointer to the root node of the tree to traverse
+ * @func: Pointer to a function to call for each node.
+ * The value in the node must be passed as a parameter to this function
+ * If tree or func is NULL, do nothing
+ */
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 
 #endif /* _BINARY_TREES_H_ */
