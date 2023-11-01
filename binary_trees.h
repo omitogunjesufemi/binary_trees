@@ -213,4 +213,18 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
  */
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 
+/**
+ * binary_tree_rotate_left - Performs a left rotation on a binary tree
+ * @tree: Pointer to the root node of the tree to rotate
+ * Return: Pointer to the new root node of the tree once rotated
+ */
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+
+/**
+ * binary_tree_rotate_right - Performs a right rotation on a binary tree
+ * @tree: Pointer to the root node of the tree to rotate
+ * Return: Pointer to the new root node of the tree once rotated
+ */
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+
 #endif /* _BINARY_TREES_H_ */
