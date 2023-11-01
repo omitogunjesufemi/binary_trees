@@ -227,4 +227,12 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
  */
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 
+/**
+ * binary_tree_is_complete - Function checks if a binary tree is complete
+ * @tree: Pointer to the root node of the tree to check
+ * Return: 1 if complete, 0 if otherwise
+ * If tree is NULL, your function must return 0
+ */
+int binary_tree_is_complete(const binary_tree_t *tree);
+
 #endif /* _BINARY_TREES_H_ */

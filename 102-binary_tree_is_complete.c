@@ -4,32 +4,43 @@ queue *create_node(const binary_tree_t *tree);
 void enqueue(queue **first, queue **last, const binary_tree_t *tree);
 void dequeue(queue **first, queue **last);
 
+
 /**
- * binary_tree_levelorder - Function that goes through a binary tree using
- * level-order traversal
- * @tree: Pointer to the root node of the tree to traverse
- * @func: Pointer to a function to call for each node.
- * The value in the node must be passed as a parameter to this function
- * If tree or func is NULL, do nothing
+ * binary_tree_is_complete - Function checks if a binary tree is complete
+ * @tree: Pointer to the root node of the tree to check
+ * Return: 1 if complete, 0 if otherwise
+ * If tree is NULL, your function must return 0
  */
-void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
+int binary_tree_is_complete(const binary_tree_t *tree)
 {
 	queue *first, *last;
+	int count;
 
-	if (tree == NULL)
-		return;
+	count = 0;
 	first = NULL, last = NULL;
 	enqueue(&first, &last, tree);
-
 	while (first != NULL && last != NULL)
 	{
-		func(first->tree->n);
 		if (first->tree->left != NULL)
+		{
 			enqueue(&first, &last, first->tree->left);
+			if (count)
+				return (0);
+		}
+		else
+			count++;
 		if (first->tree->right != NULL)
+		{
 			enqueue(&first, &last, first->tree->right);
+			if (count)
+				return (0);
+		}
+		else
+			count++;
+
 		dequeue(&first, &last);
 	}
+	return (1);
 }
 
 /**
