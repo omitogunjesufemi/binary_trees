@@ -153,4 +153,13 @@ size_t binary_tree_leaves(const binary_tree_t *tree);
  */
 size_t binary_tree_nodes(const binary_tree_t *tree);
 
+/**
+ * binary_tree_balance - A function that measures the balance factor of
+ * a binary tree
+ * @tree: Pointer to the root node of the tree to measure the balance factor
+ * If tree is NULL return 0
+ * Return: Balance factor
+ */
+int binary_tree_balance(const binary_tree_t *tree);
+
 #endif /* _BINARY_TREES_H_ */
