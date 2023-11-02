@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stddef.h>
+#include <limits.h>
 
 /**
  * struct binary_tree_s - Binary tree node
@@ -234,5 +235,13 @@ binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
  * If tree is NULL, your function must return 0
  */
 int binary_tree_is_complete(const binary_tree_t *tree);
+
+/**
+ * binary_tree_is_bst - Checks if a binary tree is a valid Binary Search Tree
+ * @tree: Pointer to the root node of the tree to check
+ * Return: 1 if tree is a valid BST, 0 otherwise
+ * If tree is NULL, return 0
+ */
+int binary_tree_is_bst(const binary_tree_t *tree);
 
 #endif /* _BINARY_TREES_H_ */
