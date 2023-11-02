@@ -244,4 +244,15 @@ int binary_tree_is_complete(const binary_tree_t *tree);
  */
 int binary_tree_is_bst(const binary_tree_t *tree);
 
+/**
+ * binary_trees_ancestor - Finds the lowest common ancestor of two nodes
+ * @first: Pointer to the first node
+ * @second: Pointer to the second node
+ * Return: Pointer to the lowest common ancestor node of the two nodes
+ * If no common ancestor was found, your function must return NULL
+ */
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
+				     const binary_tree_t *second);
+
+
 #endif /* _BINARY_TREES_H_ */
