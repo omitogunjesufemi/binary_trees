@@ -31,7 +31,7 @@ int is_bst(const binary_tree_t *tree, int max_value, int min_value)
 	if (tree == NULL)
 		return (1);
 
-	if (tree->n >= max_value || tree->n =< min_value)
+	if (tree->n >= max_value || tree->n <= min_value)
 		return (0);
 
 	l_flag = is_bst(tree->left, tree->n, min_value);
