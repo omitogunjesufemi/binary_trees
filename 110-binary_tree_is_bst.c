@@ -22,6 +22,7 @@ int binary_tree_is_bst(const binary_tree_t *tree)
  * @tree: Subtree to be checked
  * @max_value: The maximum limit of the subtree
  * @min_value: The minimum limit of the subtree
+ * Return: 1 if valid BST, 0 otherwise
  */
 int is_bst(const binary_tree_t *tree, int max_value, int min_value)
 {
@@ -30,7 +31,7 @@ int is_bst(const binary_tree_t *tree, int max_value, int min_value)
 	if (tree == NULL)
 		return (1);
 
-	if (tree->n > max_value || tree->n < min_value)
+	if (tree->n >= max_value || tree->n =< min_value)
 		return (0);
 
 	l_flag = is_bst(tree->left, tree->n, min_value);
