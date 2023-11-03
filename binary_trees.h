@@ -266,4 +266,15 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
  */
 bst_t *bst_insert(bst_t **tree, int value);
 
+/**
+ * array_to_bst - Function that builds a BST from an array
+ * @array: Pointer to the first element of the array to be converted
+ * @size: Number of element in the array
+ * Return: Pointer to the root node of the created BST, or NULL on
+ * failure
+ * If a value of the array is already present in the tree, it should be
+ * ignored
+ */
+bst_t *array_to_bst(int *array, size_t size);
+
 #endif /* _BINARY_TREES_H_ */
