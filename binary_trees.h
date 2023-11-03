@@ -23,7 +23,8 @@ struct binary_tree_s
 	struct binary_tree_s *right;
 };
 typedef struct binary_tree_s bst_t;
-
+typedef struct binary_tree_s avl_t;
+typedef struct binary_tree_s heap_t;
 typedef struct binary_tree_s binary_tree_t;
 
 struct queue_s
@@ -254,5 +255,15 @@ int binary_tree_is_bst(const binary_tree_t *tree);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 				     const binary_tree_t *second);
 
+/**
+ * bst_insert - Inserts a value in a Binary Search Tree
+ * @tree: A double pointer to the root node of the BST to insert the value
+ * @value: Value to store in the node to be inserted
+ * Return: Pointer to the created node, or NULL on failure
+ * If the address stored in tree is NULL, the created node must become the
+ * root node
+ * If the value is already present in the tree, it must be ignored
+ */
+bst_t *bst_insert(bst_t **tree, int value);
 
 #endif /* _BINARY_TREES_H_ */
