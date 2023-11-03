@@ -58,6 +58,5 @@ bst_t *insert_bst_node(bst_t **tree, int value, bst_t **node)
 		*node = NULL;
 	}
 
-	printf("Tree Value: %d\n", (*tree)->n);
 	return (*tree);
 }
